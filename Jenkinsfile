@@ -1,7 +1,7 @@
 node {
     def app
     stage('Clone repository') {
-        checkout main
+        checkout scm
     }
     stage('Build image') {
        app = docker.build("lkolev/kiii-jenkins-blueocean")
